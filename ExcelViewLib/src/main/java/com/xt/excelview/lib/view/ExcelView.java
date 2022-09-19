@@ -104,20 +104,20 @@ public class ExcelView extends View {
 
     private void init(AttributeSet attrs) {
         if (attrs != null) {
-            TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.ExcelView);
-            mAttr.itemWidth = a.getDimension(R.styleable.ExcelView_excel_view_item_width, dipUnit * 70);
-            mAttr.itemHeight = a.getDimension(R.styleable.ExcelView_excel_view_item_height, dipUnit * 28);
-            mAttr.paddingTop = a.getDimension(R.styleable.ExcelView_excel_view_padding_top, dipUnit * 9);
-            mAttr.paddingLeft = a.getDimension(R.styleable.ExcelView_excel_view_padding_left, dipUnit * 15);
-            mAttr.dividerWidth = a.getDimension(R.styleable.ExcelView_excel_view_divider_width, 1);
-            mAttr.iconWidth = a.getDimension(R.styleable.ExcelView_excel_view_range_icon_width, dipUnit * 12);
-            mAttr.textSize = a.getDimension(R.styleable.ExcelView_excel_view_text_size, dipUnit * 11);
+            
+            mAttr.itemWidth = 70dp;
+            mAttr.itemHeight = 28dp;
+            mAttr.paddingTop = 9dp;
+            mAttr.paddingLeft = 15dp;
+            mAttr.dividerWidth = 1dp;
+            mAttr.iconWidth = 12dp;
+            mAttr.textSize =  11dp;
 
-            mAttr.onlyReadColor = a.getColor(R.styleable.ExcelView_excel_view_text_color, Color.parseColor("#999999"));
-            mAttr.textColor = a.getColor(R.styleable.ExcelView_excel_view_text_color, Color.parseColor("#333333"));
-            mAttr.dividerColor = a.getColor(R.styleable.ExcelView_excel_view_divider_color, Color.parseColor("#e8e8e8"));
-            mAttr.selectDividerColor = a.getColor(R.styleable.ExcelView_excel_view_select_divider_color, Color.parseColor("#287076"));
-            mAttr.selectBgColor = a.getColor(R.styleable.ExcelView_excel_view_select_bg_color, Color.parseColor("#1A2870f6"));
+            mAttr.onlyReadColor = "#999999";
+            mAttr.textColor = "#333333";
+            mAttr.dividerColor = "#e8e8e8";
+            mAttr.selectDividerColor = "#287076";
+            mAttr.selectBgColor = "#1A2870f6";
             a.recycle();
         }
         setShowAttr(mAttr);
